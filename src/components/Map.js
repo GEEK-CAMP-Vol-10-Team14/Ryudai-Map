@@ -22,7 +22,7 @@ export const Map = () => {
   // 初期マップズームレベル
     const zoom = 18;
     // 画像のURLと画像を表示する地理的範囲
-    const imageUrl = 'https://ul.h3z.jp/GPD9DT5o.PNG';
+    const imageUrl = 'https://ul.h3z.jp/Bx4pqLV3.PNG';
     const imageBounds = [
         [26.254183843420073, 127.76381958397214],
         [26.251230739885845, 127.76853133709768]
