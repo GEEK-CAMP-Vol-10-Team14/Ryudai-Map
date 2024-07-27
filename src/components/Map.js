@@ -1,5 +1,5 @@
 import React, { useState, useEffect }  from 'react';
-import { MapContainer, TileLayer, Marker, Popup, ImageOverlay, useMap } from 'react-leaflet'
+import { MapContainer, TileLayer, Marker, Popup, ImageOverlay } from 'react-leaflet'
 import './Map.css';
 import 'leaflet/dist/leaflet.css';
 import L from 'leaflet';
@@ -14,6 +14,7 @@ let DefaultIcon = L.icon({
 });
 L.Marker.prototype.options.icon = DefaultIcon;
 
+// GPS用のアイコン
 const GPSIcon = L.divIcon({
     className: 'GPS-marker',
     html: '<div></div>',
@@ -46,15 +47,8 @@ const useCurrentLocation = () => {
 
 const CurrentLocationMarker = () => {
     const position = useCurrentLocation();
-    const map = useMap();
-    useEffect(() => {
-        if (position) {
-            map.flyTo(position, map.getZoom());
-        }
-    }, [position, map]);
     return position ? (
         <Marker position={position} icon={GPSIcon}>
-            <Popup>You are here</Popup>
         </Marker>
         ) : null;
 };
