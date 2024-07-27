@@ -16,15 +16,7 @@ let DefaultIcon = L.icon({
 });
 L.Marker.prototype.options.icon = DefaultIcon;
 
-// カスタムアイコンの設定
-const smallRedIcon = L.icon({
-    iconUrl: icon, // カスタムアイコンのURLを設定できます
-    shadowUrl: iconShadow,
-    iconSize: [18, 30], // 小さくする
-    iconAnchor: [9, 30],
-    popupAnchor: [0, -30],
-    className: 'custom-icon-red' // CSSクラスを追加して色を変える
-});
+
 
 const zihanki = L.icon({
     iconUrl: zihank_icon, // カスタムアイコンのURLを設定できます
