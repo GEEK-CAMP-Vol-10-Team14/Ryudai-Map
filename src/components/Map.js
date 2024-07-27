@@ -1,5 +1,5 @@
-import React from 'react';
-import { MapContainer, TileLayer, Marker, Popup, ImageOverlay } from 'react-leaflet'
+import React, { useState, useEffect }  from 'react';
+import { MapContainer, TileLayer, Marker, Popup, ImageOverlay, useMap } from 'react-leaflet'
 import './Map.css';
 import 'leaflet/dist/leaflet.css';
 import L from 'leaflet';
@@ -14,7 +14,50 @@ let DefaultIcon = L.icon({
 });
 L.Marker.prototype.options.icon = DefaultIcon;
 
+const GPSIcon = L.divIcon({
+    className: 'GPS-marker',
+    html: '<div></div>',
+    iconSize: [15, 15],
+    iconAnchor: [7.5, 7.5], // アイコンの中心に位置を設定
+});
 
+// 現在地を表示するためのカスタムフック
+const useCurrentLocation = () => {
+    const [position, setPosition] = useState(null);
+
+    useEffect(() => {
+        if (!navigator.geolocation) {
+        console.error("Geolocation is not supported by your browser");
+        return;
+        }
+        const updatePosition = (position) => {
+        const { latitude, longitude } = position.coords;
+        setPosition([latitude, longitude]);
+        };
+        const geoId = navigator.geolocation.watchPosition(updatePosition, console.error, {
+        enableHighAccuracy: true,
+        maximumAge: 0,
+        timeout: 5000,
+        });
+        return () => navigator.geolocation.clearWatch(geoId);
+    }, []);
+    return position;
+    };
+
+const CurrentLocationMarker = () => {
+    const position = useCurrentLocation();
+    const map = useMap();
+    useEffect(() => {
+        if (position) {
+            map.flyTo(position, map.getZoom());
+        }
+    }, [position, map]);
+    return position ? (
+        <Marker position={position} icon={GPSIcon}>
+            <Popup>You are here</Popup>
+        </Marker>
+        ) : null;
+};
 
 export const Map = () => {
   // 緯度軽度
@@ -47,6 +90,7 @@ export const Map = () => {
                 A pretty CSS3 popup. <br /> Easily customizable.
             </Popup>
         </Marker>
+        <CurrentLocationMarker />
         <ImageOverlay url={imageUrl} bounds={imageBounds}/>
     </MapContainer>
 )
