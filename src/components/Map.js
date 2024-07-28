@@ -43,7 +43,7 @@ const useCurrentLocation = () => {
         return () => navigator.geolocation.clearWatch(geoId);
     }, []);
     return position;
-    };
+};
 
 const CurrentLocationMarker = () => {
     const position = useCurrentLocation();
