@@ -16,6 +16,13 @@ let DefaultIcon = L.icon({
 });
 L.Marker.prototype.options.icon = DefaultIcon;
 
+const zihanki = L.icon({
+    iconUrl: zihank_icon, // カスタムアイコンのURLを設定できます
+    iconSize: [18, 30], // 小さくする
+    iconAnchor: [9, 30],
+    popupAnchor: [0, -30],
+});
+
 // GPS用のアイコン
 const GPSIcon = L.divIcon({
     className: 'GPS-marker',
