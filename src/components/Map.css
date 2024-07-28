@@ -3,6 +3,7 @@
     height: 100vh;
 
 }
+<<<<<<< HEAD
 .GPS-marker {
     width: 12px;
     height: 12px;
@@ -15,3 +16,20 @@
     justify-content: center;
     color: white;
 }
+=======
+/* カスタムアイコンの色を変更するためのクラス */
+.custom-icon-red {
+    filter: hue-rotate(0deg) brightness(0) sepia(1) saturate(5) contrast(1);
+}
+
+/* 画像オーバーレイのスタイル */
+.leaflet-image-overlay {
+    opacity: 0.7; /* 画像オーバーレイの透明度調整 */
+}
+
+/* マップのサイズ調整 */
+.leaflet-container {
+    width: 100%;
+    height: 100vh;
+}
+>>>>>>> feature/hiraki-try
