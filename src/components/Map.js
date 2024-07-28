@@ -36,7 +36,13 @@ export const Map = () => {
     const kitasyoku = [26.25175, 127.76591];
     const tisou_hanbaiki = [26.25331, 127.76596];
     const itigou_hanbaiki = [26.25331, 127.76643];
-  
+    const nigou_hanbaiki = [26.25279, 127.76653]
+    const sangou_hanbaiki = [26.25217, 127.76708]
+    const yongou_hanbaiki = [26.25260, 127.76771]
+    const kitasyoku_hanbaiki_iti = [26.25170, 127.76581]
+    const kitasyoku_hanbaiki_ni = [26.25162, 127.76584]
+    const zagakukan_zihanki = [26.25354, 127.76625]
+    const mitinoue = [26.25196, 127.76654]
     // 初期マップズームレベル
     const zoom = 18;
     // 画像のURLと画像を表示する地理的範囲
@@ -61,33 +67,71 @@ export const Map = () => {
             <Marker position={one}>
                 <Popup>工学部1号館</Popup>
             </Marker>
+
             <Marker position={two}>
                 <Popup>工学部2号館</Popup>
             </Marker>
+
             <Marker position={three}>
                 <Popup>工学部3号館</Popup>
             </Marker>
+
             <Marker position={four}>
                 <Popup>工学部4号館</Popup>
             </Marker>
+
             <Marker position={tisou}>
                 <Popup>琉球大学地域創生総合研究棟</Popup>
             </Marker>
+
             <Marker position={kitasyoku}>
                 <Popup>北食堂</Popup>
             </Marker>
+
             <Marker position={tisou_hanbaiki} icon={zihanki}>
                 <Popup>販売機 'Coca-Cola'</Popup>
             </Marker>
+
             <Marker position={itigou_hanbaiki} icon={zihanki}>
                 <Popup>販売機 'Asahi'</Popup>
-            </Marker><Marker position={tisou_hanbaiki} icon={zihanki}>
+             </Marker>
+
+            <Marker position={tisou_hanbaiki} icon={zihanki}>
                 <Popup>販売機 'Coca-Cola'</Popup>
-            </Marker>
+             </Marker>
+
             <Marker position={itigou_hanbaiki} icon={zihanki}>
                 <Popup>販売機 'Asahi'</Popup>
-            </Marker>
+             </Marker>
+
+            <Marker position={nigou_hanbaiki} icon={zihanki}>
+                <Popup>販売機 'Asahi'</Popup>
+             </Marker>
+
+             <Marker position={kitasyoku_hanbaiki_iti} icon={zihanki}>
+                <Popup>販売機 'Coca-Cola'</Popup>
+             </Marker>
+
+             <Marker position={zagakukan_zihanki} icon={zihanki}>
+                <Popup>販売機 'Asahi'</Popup>
+             </Marker>
+
+             <Marker position={mitinoue} icon={zihanki}>
+                <Popup>販売機 'pokka-sapporo'</Popup>
+             </Marker>
+
+             <Marker position={sangou_hanbaiki} icon={zihanki}>
+                <Popup>販売機 'Coca-Cola'</Popup>
+             </Marker>
+
+             <Marker position={yongou_hanbaiki} icon={zihanki}>
+                <Popup>販売機 'pokka-sapporo'</Popup>
+             </Marker>
+            
+
             <ImageOverlay url={imageUrl} bounds={imageBounds}/>
+
+
 
         </MapContainer>
     );
