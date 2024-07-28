@@ -16,7 +16,7 @@ export const BuildingThree = () =>{
                 </tr>
                 <tr>
                     <th>what3words</th>
-                    <th>///ごがく。ほねつき。めんせき</th>
+                    <th>&#47;&#47;&#47;ごがく。ほねつき。めんせき</th>
                 </tr>
             </table>
             <iframe 

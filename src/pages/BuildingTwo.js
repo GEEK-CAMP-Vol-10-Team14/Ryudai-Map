@@ -16,7 +16,7 @@ export const BuildingTwo = () =>{
                 </tr>
                 <tr>
                     <th>what3words</th>
-                    <th>///まんたん。さいばし。まえうり</th>
+                    <th>&#47;&#47;&#47;まんたん。さいばし。まえうり</th>
                 </tr>
             </table>
             <iframe 

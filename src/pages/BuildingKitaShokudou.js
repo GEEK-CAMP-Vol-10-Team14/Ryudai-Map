@@ -16,7 +16,7 @@ export const BuildingKitaShokudou = () =>{
                 </tr>
                 <tr>
                     <th>what3words</th>
-                    <th>///ざっそう。だいすき。ねまき</th>
+                    <th>&#47;&#47;&#47;ざっそう。だいすき。ねまき</th>
                 </tr>
             </table>
             <iframe 

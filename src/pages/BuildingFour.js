@@ -16,7 +16,7 @@ export const BuildingFour = () =>{
                 </tr>
                 <tr>
                     <th>what3words</th>
-                    <th>///つなげる。えきたい。まいねん</th>
+                    <th>&#47;&#47;&#47;つなげる。えきたい。まいねん</th>
                 </tr>
             </table>
             <iframe 
