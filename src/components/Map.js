@@ -102,27 +102,39 @@ export const Map = () => {
                 url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
             />
             <Marker position={one}>
-                <Popup>工学部1号館</Popup>
+                <Popup>工学部1号館
+                <a href="./BuildingOne"  rel="noopener noreferrer">詳細</a>
+                </Popup>
             </Marker>
 
             <Marker position={two}>
-                <Popup>工学部2号館</Popup>
+                <Popup>工学部2号館<br></br>
+                <a href="./BuildingTwo"  rel="noopener noreferrer">詳細</a>
+                </Popup>
             </Marker>
 
             <Marker position={three}>
-                <Popup>工学部3号館</Popup>
+                <Popup>工学部3号館<br></br>
+                <a href="./BuildingThree"  rel="noopener noreferrer">詳細</a>
+                </Popup>
             </Marker>
 
             <Marker position={four}>
-                <Popup>工学部4号館</Popup>
+                <Popup>工学部4号館<br></br>
+                <a href="./BuildingFour"  rel="noopener noreferrer">詳細</a>
+                </Popup>
             </Marker>
 
             <Marker position={tisou}>
-                <Popup>琉球大学地域創生総合研究棟</Popup>
+                <Popup>琉球大学地域創生総合研究棟<br></br>
+                <a href="./BuildingTisoto"  rel="noopener noreferrer">詳細</a>
+                </Popup>
             </Marker>
 
             <Marker position={kitasyoku}>
-                <Popup>北食堂</Popup>
+                <Popup>北食堂<br></br>
+                <a href="./BuildingKitaShokudou"  rel="noopener noreferrer">詳細</a>
+                </Popup>
             </Marker>
 
             <Marker position={tisou_hanbaiki} icon={zihanki}>
