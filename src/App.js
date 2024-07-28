@@ -7,6 +7,7 @@ import { BuildingTwo } from './pages/BuildingTwo';
 import { BuildingThree } from './pages/BuildingThree';
 import { BuildingFour } from './pages/BuildingFour';
 import { BuildingKitaShokudou } from './pages/BuildingKitaShokudou';
+import { BuildingTisoto } from './pages/BuildingTisoto';
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
         <Route path='/BuildingThree' element={ <BuildingThree /> } />
         <Route path='/BuildingFour' element={ <BuildingFour /> } />
         <Route path='/BuildingKitaShokudou' element={ <BuildingKitaShokudou /> } />
+        <Route path='/BuildingTisoto' element={ <BuildingTisoto /> } />
       </Routes>
     </div>
   );

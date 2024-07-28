@@ -34,8 +34,7 @@ export const BuildingKitaShokudou = () =>{
 
             <h2>アクセス</h2>
             <p>
-                北口から：徒歩約7分<br></br>
-                北食堂から：徒歩約3分
+                北口から：徒歩約5分
             </p>
 
             <h2>備考</h2>
