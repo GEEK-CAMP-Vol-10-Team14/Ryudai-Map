@@ -102,7 +102,7 @@ export const Map = () => {
                 url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
             />
             <Marker position={one}>
-                <Popup>工学部1号館
+                <Popup>工学部1号館<br></br>
                 <a href="./BuildingOne"  rel="noopener noreferrer">詳細</a>
                 </Popup>
             </Marker>
