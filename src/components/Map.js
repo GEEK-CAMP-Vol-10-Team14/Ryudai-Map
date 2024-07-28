@@ -127,6 +127,10 @@ export const Map = () => {
              <Marker position={yongou_hanbaiki} icon={zihanki}>
                 <Popup>販売機 'pokka-sapporo'</Popup>
              </Marker>
+
+             <Marker position={kitasyoku_hanbaiki_ni} icon={zihanki}>
+                <Popup>販売機 'Asahi'</Popup>
+             </Marker>
             
 
             <ImageOverlay url={imageUrl} bounds={imageBounds}/>
